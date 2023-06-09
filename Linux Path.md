@@ -1,3 +1,19 @@
+## Linux
+
+- Challenge Type : Learning
+- Delay : 5 days without projects
+- Team : Solo
+
+# Project context.
+
+Exercises to practice your Linux knowledge. There are some exercises that are specially designed for the rest of your training, so don't skip them.
+Requirements
+
+- You must have a Kali linux machine installed on your machine.
+- You must be able to run a second Virtual Machine.
+
+
+# Finding Files with Linux
 
 Create a file named my-file.txt with the touch command. Then execute the locate my-file.txt command. Do you find the file?
 
@@ -16,7 +32,7 @@ With the command which, find the executable file becode. What is the flag ?
 
 Search with find command for a file that contains the name "Edgar Allan Poe". What is the flag ?
 
-        Flag :
+        Flag : FLAG BC{3d54r_4ll4n_P03_FL45}
 
 Using the find command, find the file password.txt and specify the flag.
 
@@ -41,7 +57,8 @@ With the find command, find all the files that have an authorization of 0777.
 
 With the find command, find all the files in the folder /home/student/findme/ that have an authorization of 0777 and change the rights of these files to 0755
 
-        Your command
+        Your command: chmod 755 findme
+
  
      
      
