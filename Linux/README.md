@@ -205,9 +205,11 @@ From an analyst's perspective, look for information that might be useful to you 
 
 On your kali (or other) , install ngnix to have an http server on port 8080. Replace the default page of ngnix by an html page displaying a hello world.
 
-        No answer required
+		 No answer required
         sudo apt update
         sudo apt install nginx
+        systemctl status nginx
+        system nginx restart
 
 What other well-known service could be used instead of nginx?
 
@@ -220,7 +222,7 @@ On your student machine, create a temporary http server with python, on port 500
 
 Let's imagine that a hacker owns the domain name g00gle.com, which tool would allow him to obtain an ssl certificate (https) very easily?
 
-        Your answer :
+        Your answer : 
 
 On a linux machine, what tool could you use to have a self-signed SSL certificate on your local machine (localhost) ?
 
@@ -230,14 +232,16 @@ On a linux machine, what tool could you use to have a self-signed SSL certificat
 On your student machine, install the ftp service and connect from your kali machine.
 
         sudo apt-get install vsftpd
-        ftp localhost
-        username: student
-        admin: student
+        ftp IP_student_Machine
+        username: s****
+        admin: s****
         service vsftpd start
 
 What is the default port for ftp?
 
-        Your answer :
+		#Scan the port
+		nmap IP_LOCAL_MACHINE
+       Your answer : 21
 
 Is the ftp protocol secured?
 
@@ -251,6 +255,10 @@ On your student machine, install the telnet service and connect from your kali m
 What is the default port for telnet?
 
         Your answer : 23
+        
+**Partial PATH FLAG** 
+
+	becode-flag-BC{FLAG_FIND_PARTIAL_PATH}.sh	       
 
 Is the telnet protocol secured?
 
@@ -262,6 +270,33 @@ Create a share file with samba between your Kali machine and your student machin
 
 
 ## Download Files
+
+Exercises
+
+    On your Kali machine, create a file named malware.php.
+
+    echo "This is a malware file" > malware.php
+
+Then, in the same directory, ccreate a temporary server with python on port 5000.
+
+	python3 -m http.server 5000
+
+On your Student machine, download the malware.txt file with the wget command.
+
+    Your command : 
+
+On your Student machine, download the malware.txt file with the cURL command.
+
+    Your command :
+
+On the student machine, create a file named password.txt and transfer it to your student machine with netcat
+
+    Your commands
+
+On the student machine, transfer /etc/passwd file to your kali machine with tftp
+
+    your commands
+
 
 
 
