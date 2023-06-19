@@ -72,8 +72,8 @@ You can now close the connection to the server with `exit`.****
 
 # Harden SSH
 
-* Using this file 
-[Server Hardenning](Server_hardenning.md) I set up my computer configuration.
+* Using this file I set up my computer. 
+[Server Hardenning](Server_hardenning.md) 
 
 # Installing DHCP SERVER
 
@@ -83,7 +83,7 @@ I followed this tutorial : [How to install DHCP Server] (https://www.youtube.com
 
 ### /etc/default/isc-dhcp-server
 
-Add configuration for DHCPDv4. INTERFACESv4 is a network interface name which is connected to a network which you try to provided DHCP. 
+I Added configuration for DHCPDv4. INTERFACESv4 is a network interface name which is connected to a network which you try to provided DHCP. 
 		
 		sudo nano etc/default/isc-dhcp-server 
 		
@@ -390,8 +390,31 @@ View of my GLPI from my Manjaro workstation
 
 ![](ssh.png)
 
-## Daily Backup
+# Weekly backup
+##Installing Rsync 
 
+rsync is fast, versatile, remote (and local) file-copying tool. 
+
+Installed on my debian server and Manjaro remote machine
+
+	sudo apt -y install rsync (Debian Server)
+
+Manjaro
+
+	Enable snapd 
+	sudo 
+
+With tar
+
+	tar -zcf ~/backups/daily/backup-$(date +%Y%m%d).tar.gz -C /var/www/ glpi
+
+rsync delete +7 days + remote machine
+
+	rsync -a --delete /root/backups/ gally@192.168.1.59:~/backups
+	
+Create a folder with the name backup on the home directory of my Remote Machine.
+			 
+	
 
 
 
@@ -402,7 +425,7 @@ View of my GLPI from my Manjaro workstation
 
 ## Linux Manjaro
 
-I installed linux Manjaro because it's a system that emphasizes user privacy and control of their hardware and it provides numerous customization options and applications, as well as security and privacy features. It also offers several graphical user interfaces.
+I installed linux   because it's a system that ≠ user privacy and control of their hardware and it provides numerous customization options and applications, as well as security and privacy features. It also offers several graphical user interfaces.
 
 Over the years, Manjaro Linux was recognized as a desktop easy to set up and use, suitable for both beginners and experienced users.
 
