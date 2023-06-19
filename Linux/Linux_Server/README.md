@@ -296,7 +296,7 @@ the MariaDB server is listening on localhost only for security reasons. You can 
 
 	MariaDB [(none)]> CREATE DATABASE glpi;
 	MariaDB [(none)]> CREATE USER  'glpi'@'localhost' IDENTIFIED BY 	'password';
-	MariaDB [(none)]> GRANT ALL ON glpi.* to 'wpuser'@'localhost' IDENTIFIED 	BY 'password*********' WITH GRANT OPTION;
+	MariaDB [(none)]> GRANT ALL ON glpi.* to 'wpuser'@'localhost' IDENTIFIED 	BY 'password_*********' WITH GRANT OPTION;
 	MariaDB [(none)]> FLUSH PRIVILEGES;
 	MariaDB [(none)]> EXIT;
 	
@@ -311,14 +311,43 @@ the MariaDB server is listening on localhost only for security reasons. You can 
 	
 ##Installing GLPI
 
-Just download the software
+Just download the software and make sure Mariabd + php + Mysql were installed.
 
-http://localhost/glpi
+Followed this tutorial 
+(https://www.youtube.com/watch?v=X3jbo6rFntI)
+
+* Installation of PHP extensions required by GLPI
+
+		sudo apt install -y php-curl php-zip php-gd php-intl php-intl php-pear 		php-imagick php-imap php-memcache php-pspell php-tidy php-xmlrpc php-xsl 		php-mbstring php-ldap php-ldap php-cas php-apcu libapache2-mod-php php-		mysql php-bz2
+		
+* Download GLPI on my system /var/www/html
+
+		sudo w-get (https://glpi-project.org/download/)
+		sudo tar -xvf glpi....tgz
+		
+* Change permissions on the GLPI folder 
+
+		sudo chmod 755 -R glpi
+		sudo chown -R www-data:www-data glpi
+
+* restart Apache
+	
+		sudo systemctl restart apache2
+		
+* Access Address 
+	
+		http://IP_SERVER/glpi
+		
+* Installation GLPI on my server
+		
 
 [GLPI PROJECT](https://glpi-project.org/)	
-I installed GLPI in my Manjaro workstation
+View of my GLPI from my Manjaro workstation
 
 ![](glpi_installation.png)
+
+## Daily Backup
+
 
 
 # Workstation
@@ -348,6 +377,8 @@ Over the years, Manjaro Linux was recognized as a desktop easy to set up and use
 ### Installing Gimp 
 
 	pamac install gimp
+	
+	
 	
 
 		
