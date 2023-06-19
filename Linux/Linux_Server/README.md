@@ -19,118 +19,25 @@
 	
 		apt update
 		apt install ufw
-		
-- Once installed I enabled my firewall. 
-
 		sudo ufw enable
 		
 - I set default policies:
 	
 		sudo ufw default deny incoming
 		sudo ufw default allow outgoing	
-		
-- I reload the firewall UFW:
-
 		sudo ufw reload
-		
-- Allow ssh connections and enable the firewall:
-
-		ufw allow SSH		
-		
-- Verify the status with:
-
+		ufw allow SSH	
 		ufw status verbose		
-		
-- Enable the firewall:
-
 		ufw enable
 		
 _Note: later you will probably need to adjust the firewall settings to allow traffic in from other services that you install; example for Nginx: `sudo ufw allow 'Nginx Full'`._
 
 You can now close the connection to the server with `exit`.****
 
-## 3. Harden SSH
+# Harden SSH
 
-### 3.1 Client config
-
-On your local machine, open the `ssh_config` file:
-
-`sudo nano /etc/ssh/ssh_config`
-
-Add or modify these lines to allow public key authentication, disable IPv6 to reduce attack surface, and use the strongest cipher suites, message integrity codes, and key exchange algorithms available:
-
-```
-PubkeyAuthentication yes
-AddressFamily inet
-StrictHostKeyChecking ask
-Ciphers chacha20-poly1305@openssh.com
-MACs hmac-sha2-512-etm@openssh.com
-KexAlgorithms curve25519-sha256
-```
-
-### 3.2 Server config
-
-Open two terminal tabs/windows and establish two separate SSH connections to the server, for backup purposes:
-
-`ssh root@server_ip`
-
-Restart the sshd daemon:
-
-`systemctl restart sshd`
-
-If both connections are still alive, try opening a third terminal window and test new connections:
-
-`ssh root@server_ip`
-
-Proceed if everything is working as expected.
-
-In any terminal, make a backup of the original SSH configuration file with:
-
-`cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup`
-
-Now open the `sshd_config` file:
-
-`nano /etc/ssh/sshd_config`
-
-Add or modify these lines to enable SSH v2 for added protections against known vulnerabilities, disable IPv6, disallow root/pass logins, only allow logins from the user `newuser`, and use the strongest ciphers and algos available:
-
-
-```
-Protocol 2
-AddressFamily inet
-PermitRootLogin prohibit-password
-PasswordAuthentication no
-AllowUsers newuser
-Ciphers chacha20-poly1305@openssh.com
-MACs hmac-sha2-512-etm@openssh.com
-KexAlgorithms curve25519-sha256
-```
-
-_Note: replace `newuser` with the actual username from step 1._
-
-_Note: run `ssh -Q cipher`, `ssh -Q mac`, and `ssh -Q kex` for a list of supported ciphers and algorithms._
-
-You can also change the default ssh daemon listen port from 22 to something else in an attempt to avoid open ports scans:
-
-`Port 3489`
-
-_Note: if you change the default ssh port, you need to update ufw rules; example: `ufw allow 3489`. Connect with `ssh newuser@server_ip -p 3489`._
-
-Save the file with `CTRL+X` > `Y` > press Enter.
-
-### 3.2 Test connection
-
-Restart the sshd daemon:
-
-`systemctl restart sshd`
-
-Open another terminal tab/window and try to SSH to the server:
-
-`ssh newuser@server_ip`
-
-If it doesn’t work, check for configuration errors using the other terminal and then try again.
-
-If successful, you will be able to ssh with `newuser` to the server from now on, and install any software you want.
+* Using this file 
+[Server Hardenning](Server_hardenning.md) I set up my computer configuration.
 
 # Installing DHCP SERVER
 
@@ -344,11 +251,103 @@ First, check which interface is used for LAN connectivity
 	ip -brief addr show to 10.40.0.0/16
 	
 	R= enp0s1   UP  10.40.6.125/16
+	
+	
+## HTTP+ Maria
 
 
+Sources
+
+[Install Apache2 On debian Server](https://kifarunix.com/install-apache-web-server-on-debian-12/)
+
 	
+[Install Mariadb on Debian 12](https://kifarunix.com/install-mariadb-10-on-debian-12/)
 	
+Securing MariaDB 10
 	
+	MariaDB comes with a default security script, mariadb-secure-installation that is used to improve the security of MariaDB installation by:
+
+    Setting the password for root accounts (if need be).
+    Disabling remote root login to the databases.
+    Removing anonymous-user accounts.
+    Removing the test database, which by default can be accessed by anonymous users.
+    
+    
+   Login 
+   
+ 		mariadb
+ 		Or;
+ 		sudo -u mysql mariadb	
+
+Verify MariaDB Server
+	
+	ps -ef | grep -i mysql
+	
+the MariaDB server is listening on localhost only for security reasons. You can check it with the following command:
+
+	netstat -ant | grep 3306	
+	
+	ufw allow mysql 
+	
+[Configuration of the Maria DataBase] 
+(https://webdock.io/en/docs/how-guides/database-guides/how-enable-remote-access-your-mariadbmysql-database)	
+
+# Grant Access to a User
+
+	MariaDB [(none)]> CREATE DATABASE glpi;
+	MariaDB [(none)]> CREATE USER  'glpi'@'localhost' IDENTIFIED BY 	'password';
+	MariaDB [(none)]> GRANT ALL ON glpi.* to 'wpuser'@'localhost' IDENTIFIED 	BY 'password*********' WITH GRANT OPTION;
+	MariaDB [(none)]> FLUSH PRIVILEGES;
+	MariaDB [(none)]> EXIT;
+	
+## Access to MySQL
+
+	sudo mysql -u 'user' -p 
+	enter password 
+	
+	show databases;
+	
+![](databases.png)	
+	
+##Installing GLPI
+
+Just download the software
+
+http://localhost/glpi
+
+[GLPI PROJECT](https://glpi-project.org/)	
+I installed GLPI in my Manjaro workstation
+
+![](glpi_installation.png)
+
+
+# Workstation
+
+[Plasma Desktop Download](https://manjaro.org/download/)
+
+## Linux Manjaro
+
+I installed linux Manjaro because it's a system that emphasizes user privacy and control of their hardware and it provides numerous customization options and applications, as well as security and privacy features. It also offers several graphical user interfaces.
+
+Over the years, Manjaro Linux was recognized as a desktop easy to set up and use, suitable for both beginners and experienced users.
+
+* Plug & Play Hardware 
+* Rolling release 
+* Wide range of software 
+* Secure by default 
+* Lightning fast 
+
+### User's interface plasma Desktop
+
+![](Manjaro.png)
+
+### Installing Libre Office
+
+	sudo pacman -Sy libreoffice-fresh
+	
+### Installing Gimp 
+
+	pamac install gimp
 	
 
 		
