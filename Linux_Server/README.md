@@ -66,6 +66,8 @@ Set up the following Linux infrastructure:
 		ufw status verbose		
 		ufw enable
 		
+"port 53 DNS static IP"
+		
 _Note: later you will probably need to adjust the firewall settings to allow traffic in from other services that you install; example for Nginx: `sudo ufw allow 'Nginx Full'`._
 
 You can now close the connection to the server with `exit`.****
@@ -87,7 +89,7 @@ I Added configuration for DHCPDv4. INTERFACESv4 is a network interface name whic
 		
 		sudo nano etc/default/isc-dhcp-server 
 		
-		INTERFACESv4=enp0S1
+		INTERFACESv4=enp0s1
 		
 ### /etc/dhcp/dhcpd.conf 
 
@@ -133,6 +135,13 @@ Printed  active DHCP leases.
 	sudo dhcp-lease-list	
 
 ![](dhcp-leases-list.png)
+
+IP static 
+
+https://www.cyberciti.biz/faq/add-configure-set-up-static-ip-address-on-debianlinux/
+
+apt install network-manager
+
 
 # DNS
 
@@ -402,7 +411,18 @@ Installed on my debian server and Manjaro remote machine
 Manjaro
 
 	Enable snapd 
-	sudo 
+	sudo pacman -S snapd
+	
+to enable classics snap support I created a symbolic link between 
+	/var/lib/snapd/ snap and /snap
+	
+	sudo systemctl enable --now snapd.socket
+	sudo ln -s /var/lib/snapd/snap /snap
+	
+Installing Rsync on Manjaro
+	
+	sudo snap install rsync	
+	
 
 With tar
 
