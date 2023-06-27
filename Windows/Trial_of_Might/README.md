@@ -12,7 +12,7 @@ complete a maximum amount of levels and take note of the passwords for each one 
     
 Encrypt the collected passwords with GPG, upload them on Github with a minimalist readme and send me your public key.
 
-Password with GPG;
+Results with GPG;
 
 [meilyn_andrade](meilyn_andrade.txt.gpg)
 
