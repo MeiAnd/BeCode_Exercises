@@ -28,7 +28,7 @@ Installing some prerequisites for Apple M2 Silicon
 Taps are external sources of Homebrew formulae, casks and/or external commands. They can be created by anyone to provide their own formulae, casks and/or external commands to any Homebrew user.
 
 ### Troubleshooting with chntpw 
-External solution for Appple M2 
+External solution for Apple M2 
 
 GitHub repository : 
 
@@ -39,9 +39,11 @@ GitHub repository :
 	brew tap minacle/chntpw
 	brew install minacle/chntpw/chntpw
 	
-### Networking does not work 
+chntpw is a software utility for resetting or blanking local passwords used by Windows NT operating systems on Linux. It does this by editing the SAM database where Windows stores password hashes. 	
+	
+### Networking 
 
-Make sure you installed the SPICE guest tools, which includes the network drivers.	
+Need to install the SPICE guest tools, which includes the network drivers.	
 	
 ![](windows.png)	
 	

@@ -77,6 +77,9 @@ You can now close the connection to the server with `exit`.****
 * Using this file I set up my computer. 
 [Server Hardenning](Server_hardenning.md) 
 
+VM configuration: host IP 10.0.2.2/24
+manually assigning IP address ifconfig enp0s1 10.0.2.3 netmask 255.255.255.0
+
 # Installing DHCP SERVER
 
 I followed this tutorial : [How to install DHCP Server] (https://www.youtube.com/watch?v=1csFmQeXHlg)
