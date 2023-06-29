@@ -122,8 +122,8 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 		
 * What do you think will be a domain of interest? Defang the domain.
 	
-			www[.]REGRUHOSTING[.]RU
-			hxxp[:]//blog[.]tulingxueyuan[.]cn/
+		www[.]REGRUHOSTING[.]RU
+		hxxp[:]//blog[.]tulingxueyuan[.]cn/
 	
 * What is the shortened URL? Defang the URL.
 	
@@ -178,7 +178,7 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 
 * Do you think this is a phishing email?
 
-				yes, IP 209[.]85[.]220[.]41 classified as malicious by https://www.virustotal.com
+		yes, IP 209[.]85[.]220[.]41 classified as malicious by https://www.virustotal.com
 
 
 ### Email #5
