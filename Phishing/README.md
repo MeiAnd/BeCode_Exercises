@@ -18,7 +18,7 @@ analyzing, and responding to cybersecurity incidents.
 Your colleagues have provided you with emails in .eml format, ".eml" files are individual email files stored in Multipurpose Internet Mail Extensions (MIME) format. To scan .eml emails, you can use tools such as email clients (Outlook, Thunderbird, etc.), email viewing applications, or specialized tools such as email scanners.
 
 
-###Email #1
+### Email #1
 
 
 * What is the email's timestamp?
@@ -54,7 +54,7 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 
 		Yes, www[.]paypal[.]be is classified as Phishing
 
-###Email #2
+### Email #2
 
 
 * What is the email's timestamp?
@@ -93,7 +93,7 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 		Surely because many links has been classified as malicious/phishing 
 		on https://www.virustotal.com/
 		
-###Email #3
+### Email #3
 
 
 * What is the email's timestamp?
@@ -137,7 +137,7 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 		80-78-255-128[.]cloudvps[.]regruhosting[.]ru (Malicious/Malware/Phishing)
 		
 
-###Email #4
+### Email #4
 
 
 * What is the email's timestamp?
@@ -155,6 +155,7 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 * What email address will receive a reply to this email?
  		
 		imorourafiatou0@gmail.com
+		Return-path babakingsouthmichael@gmail.com
 		 
 * What brand was this email tailored to impersonate?
 	
@@ -167,6 +168,8 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 				
 * What do you think will be a domain of interest? Defang the domain.
 	
+		This is a plain/text email, But it's possible to have more information here  mrroberttaiwo212@gmail.com 
+		( +229 ) 699 363 62 (Need to verify)
 			
 	
 * What is the shortened URL? Defang the URL.
@@ -176,4 +179,48 @@ Your colleagues have provided you with emails in .eml format, ".eml" files are i
 * Do you think this is a phishing email?
 
 				yes, IP 209[.]85[.]220[.]41 classified as malicious by https://www.virustotal.com
+
+
+### Email #5
+
+
+* What is the email's timestamp?
+		
+		09:42 am, Aug 27th 2022
+		
+* Who is the email from?
+
+		Ariana
+		
+* What is his email address?
+	
+		newsmail@app9l.serenitepure.fr
+			
+		
+* What email address will receive a reply to this email?
+ 		
+		Reply-To news@aichakandisha.com
+		Return-Path return24F5o01l@arnhemophthalmics.com
+		 
+* What brand was this email tailored to impersonate?
+	
+		WhatsApp 
+	
+* What is the originating IP? Defang the IP address.
+	
+		51[.]83[.]34[.]109
+				
+* What do you think will be a domain of interest? Defang the domain.
+	
+		hxxp[:]//secure-netcloud[.]com/
+			
+	
+* What is the shortened URL? Defang the URL.
+	
+		
+
+* Do you think this is a phishing email?
+
+		hxxp[:]//secure-netcloud[.]com/ (Phishing/ Suspicious) 		
+
 
