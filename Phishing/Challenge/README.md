@@ -17,6 +17,8 @@ Engaging Social Media Presence: Establish an active presence on social media pla
 
 ![](newsletter.jpeg)
 
+## Using Kali Linux (VM)
+
 # Installation Ngrok
 
 I created an account
@@ -57,16 +59,9 @@ Connecting Ngrok forwarding with setoolkit
 ![](gmail.png)
 
 
-## SENDING EMAIL
+## Troubleshooting
 
-I created an account on [https://www.mailchimp.com/](https://www.mailchimp.com/)
-
-for SMTP credentials : [https://mandrillapp.com/login/](https://mandrillapp.com/login/)
-
-## Mandrill
-
-
-Mandrill is a paid Mailchimp add-on, and allows clients to send one-to-one transactional emails triggered by user actions, like requesting a password or placing an order. 
+Tried with setoolkit but didn't work.
 
 
 
