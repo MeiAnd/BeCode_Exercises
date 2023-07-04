@@ -69,10 +69,13 @@ Tried with setoolkit but didn't work the SMTP service.
 
 So I finally sent it via Sendinblue, Not ideal because  too much personal information like your mobile phone etc...
 
+##Alternatives
+
 [https://getgophish.com/](https://getgophish.com/)
-GoPhish could be a good altertive to this problem! 
+GoPhish could be a good altertive to this problem to have my own service 
 
-
+[https://github.com/mailhog/MailHog
+](https://github.com/mailhog/MailHog) MailHog for STMP MailHog is an email testing tool for developers: Configure your application to use MailHog for SMTP delivery
 
 
 
