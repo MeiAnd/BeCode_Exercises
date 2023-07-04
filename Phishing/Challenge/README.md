@@ -61,7 +61,15 @@ Connecting Ngrok forwarding with setoolkit
 
 ## Troubleshooting
 
-Tried with setoolkit but didn't work.
+Tried with setoolkit but didn't work the SMTP service.  
+
+So I finally sent it via Sendinblue, Not ideal because  too much personal information like your mobile phone etc...
+
+##Sendinblue
+
+![](sendinblue.png)
+
+
 
 
 
