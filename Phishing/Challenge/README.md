@@ -11,7 +11,7 @@ Your mission will be to obtain Alice's or Bob's password
 
 ## Phishing Project
 
-Engaging Social Media Presence: Establish an active presence on social media platforms such as Instagram, Facebook, and Twitter. Share high-quality photos and videos of Bull Terriers in various settings, showcasing their personality and charm. Encourage followers to share their own Bull Terrier stories and images, fostering a sense of community.
+Engaging Social Media Presence: Establish an active presence on social media platforms such as Instagram, Facebook, and Twitter. Share high-quality photos and videos of Bull Terriers in various settings, showcasing their personality and charm. Encourage victime to share their own Bull Terrier stories and images, fostering a sense of community.
 
 ## Newsletter template
 
@@ -21,15 +21,16 @@ Engaging Social Media Presence: Establish an active presence on social media pla
 
 I created an account
 
-Installing Ngrok via Snap
+Installing Ngrok via Snap <br>
+**Troubleshooting:** I couldn't install it with apt packages manager so I was forced to use snap
+
 
 	snap install ngrok
 	
-	snap run ngrok config add-authtoken *********   
-
+	snap run ngrok config add-authtoken <token>
 ## Setoolkit
 
-I read this article to have a little idea how it works [Phishing Attack](https://www.cybervie.com/blog/phishing-attack-using-kali-linux/)
+I read this article to have a little idea about how it works [Phishing Attack](https://www.cybervie.com/blog/phishing-attack-using-kali-linux/)
 
 Gathered a few information about the setoolkit.
 
@@ -41,6 +42,8 @@ Gathered a few information about the setoolkit.
 	Option 2) Site cloner 
 	
 ## Ngrok configuration
+
+Start a tunnel
 	
 	snap run ngrok http 80	
 	
@@ -48,11 +51,23 @@ Connecting Ngrok forwarding with setoolkit
 
 	copy the forwarding into my setoolkit 
 	
+**The phishing website works**
+	
 ![](forwarding.png)
 ![](gmail.png)
 
 
-##Install Sendmail
+## SENDING EMAIL
 
-apt-get install sendmail
+I created an account on [https://www.mailchimp.com/](https://www.mailchimp.com/)
+
+for SMTP credentials : [https://mandrillapp.com/login/](https://mandrillapp.com/login/)
+
+## Mandrill
+
+
+Mandrill is a paid Mailchimp add-on, and allows clients to send one-to-one transactional emails triggered by user actions, like requesting a password or placing an order. 
+
+
+
 
