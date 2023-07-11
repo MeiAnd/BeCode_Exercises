@@ -1,5 +1,5 @@
 # Exercises # 1
-"""name = "Alan Turing"
+name = "Alan Turing"
 age = 42
 person = [name, age, "mathematician"]
 
@@ -11,7 +11,6 @@ age_type = type(age)
 print(age_type)
 
 import unittest
-
 
 class TestNotebook(unittest.TestCase):
     def test_name(self):
@@ -33,10 +32,10 @@ class TestNotebook(unittest.TestCase):
         self.assertEqual(age_type, int)
 
 
-unittest.main(argv=[""], verbosity=2, exit=False)"""
-'''
-# Conditions
+unittest.main(argv=[""], verbosity=2, exit=False)
 
+# Conditions
+'''
 age = 32<br>
 age += 10<br>
 divAge = age // 7<br>
@@ -64,7 +63,7 @@ print(expDiv)
 
 #orderPrice = milk + raw_cider + flour + packet_butter + nutella
 
-#print("The total price is ", orderPrice)
+#print("The total price is ", orderPrice) '''
 
 
 
@@ -295,18 +294,18 @@ for x in list_of_numbers:
     print(list_of_numbers)"""
 
 
-def multiply(*elements):  # Add "*" to indicate that the parameters are infinite
+'''def multiply(*elements):  # Add "*" to indicate that the parameters are infinite
     result = 1
     for element in elements:
         result = result * element
     return result
 
 
-print(multiply(3, 3))
+print(multiply(3, 3))'''
 
 
 
-def double_stuff(a_list):
+'''def double_stuff(a_list):
     """Overwrite each element in a_list with double its value."""
     for position in range(len(a_list)):
         a_list[position] = 2 * a_list[position]
@@ -315,7 +314,7 @@ def double_stuff(a_list):
 things = [2, 5, 9]
 print(things)
 double_stuff(things)
-print(things)
+print(things)'''
 # 1. Say Hello : Write a function called hello that returns a string of characters. This function will take as argument a variable name.
 # This function will return a string "Hello name".
 
@@ -325,12 +324,8 @@ print(things)
     name = (str(input("Enter your first name: ")))
     return print(f"Hello {name}")
 
-hello()
-"""
+hello()"""
 
-count_alpha = (len("Hello World!"))
-
-print(count_alpha)
 
 
 
